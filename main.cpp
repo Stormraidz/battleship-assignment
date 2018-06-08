@@ -1,7 +1,7 @@
 #include <iostream>
 #include "BBoard.hpp"
 #include <string>
-//#include "BBoard.hpp"
+
 using std::string;
 using std::cin;
 using std::cout;
@@ -15,10 +15,11 @@ int main()
 	cout << std::boolalpha << board.allShipsSunk() << endl;
 	board.attack(2,2);
 	cout << "damage = " << ship1.getDamage() << endl;
-	board.attack(2,3);
+	board.attack(7,7);
 	cout << std::boolalpha << board.allShipsSunk() << endl;
 	board.attack(2,3);
-	Ship* shipptr = board.getShipsArrayElement(2,3);
+	std::cout << "**" << std::endl;
+	Ship* shipPtr = board.getShipsArrayElement(2,2); // segmentation fault unable to pass *Ship 
 
 	return 0;
 }

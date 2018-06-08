@@ -3,23 +3,29 @@
 ** Date: 6/4/2018
 ** Description: Ship Class For Assignment 5
 *******************************************************************************/
-#include <iostream>
+#ifndef _SHIP_HPP_
+#define _SHIP_HPP_
 #include <string>
-class Ship{
+#include <iostream>
+using std::string;
+
+class Ship
+{
 
 	private:
 		string name;
 		int length, damage;
 
 	public:
-		Ship( string n, int l)
+		Ship( string n, int l);
 
-		int getLength()
+		int getLength();
 
-		int getDamage()
+		int getDamage();
 
-		string getName()
+		string getName();
 
-		void takeHit()
+		void takeHit();
 
 };
+#endif

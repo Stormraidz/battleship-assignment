@@ -5,33 +5,27 @@
 *******************************************************************************/
 #include <iostream>
 #include <string>
+#include "Ship.hpp"
+
 using std::string;
+Ship::Ship( string n, int l)
+{
+	name = n, length = l, damage = 0;
+}
+int Ship::getLength()
+{
+	return length;
+}
+int Ship::getDamage()
+{
+	return damage;
+}
+string Ship::getName()
+{
+	return name;
+}
+void Ship::takeHit()
+{
+	damage = damage + 1;
+}
 
-class Ship{
-
-	private:
-		string name;
-		int length, damage;
-
-	public:
-		Ship( string n, int l)
-		{
-			name = n, length = l, damage = 0;
-		}
-		int getLength()
-		{
-			return length;
-		}
-		int getDamage()
-		{
-			return damage;
-		}
-		string getName()
-		{
-			return name;
-		}
-		void takeHit()
-		{
-			damage = damage + 1;
-		}
-};
